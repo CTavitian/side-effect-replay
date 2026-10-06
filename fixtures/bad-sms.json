@@ -1,0 +1,31 @@
+{
+  "schema": "opsreplay.trace.v1",
+  "run_id": "replay-bad-sms",
+  "job_id": "WO-77",
+  "policy_version": "field-policy-2026.10",
+  "recorded_at": "2026-10-06T11:00:00Z",
+  "expected": "fail",
+  "tools": [
+    {
+      "tool": "send_sms",
+      "args": {
+        "to": "+61400000000",
+        "body": "Crew delayed"
+      },
+      "args_hash": "e60631a42cb32154e253f719830aa3897fabfabd9dd19659a4083fc8504b74ec",
+      "side_effect": true,
+      "approval": null
+    }
+  ],
+  "side_effects": [
+    {
+      "entity": "sms:+61400000000",
+      "before": {
+        "sent": false
+      },
+      "after": {
+        "sent": true
+      }
+    }
+  ]
+}

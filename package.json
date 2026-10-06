@@ -1,0 +1,24 @@
+{
+  "name": "side-effect-replay",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Freeze agent runs into approval and side-effect CI gates",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "side-effect-replay": "./dist/cli.js" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "validate": "tsx src/cli.ts validate",
+    "gate": "tsx src/cli.ts gate",
+    "diff": "tsx src/cli.ts diff",
+    "demo": "tsx src/cli.ts demo",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.6",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  },
+  "engines": { "node": ">=20" }
+}
