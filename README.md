@@ -8,7 +8,7 @@ Observability shows what happened. Replay turns a production-shaped failure into
 
 ## Digests
 
-Approvals bind to `hash(actionCanonicalJSON + policyVersion + target + expiry)`. Any argument mutation, policy bump, or expiry miss fails closed.
+Approvals bind to `hash(actionCanonicalJSON + policyVersion + target + expiry)`. Any argument mutation, policy bump, or expiry miss fails the check.
 
 ## Setup
 
@@ -32,6 +32,10 @@ npm run diff -- --a fixtures/bad-sms.json --b fixtures/good-sms.json
 
 - Not a full durable-execution platform
 - Does not send real SMS or write external systems
+
+## Status
+
+A learning project. The example data is made up.
 
 ## Licence
 
